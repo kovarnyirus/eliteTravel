@@ -1,3 +1,4 @@
+//@import "old";
 @import "bootstrap/mixins";
 @import "bootstrap/media";
 @import "bootstrap/bootstrap";
@@ -20,4 +21,5 @@
 @import "../pug/blocks/statistic/statistic";
 @import "../pug/blocks/tour-selection/tour-selection";
 @import "../pug/blocks/answers/answers";
+@import "../pug/blocks/main-nav/main-nav";
 

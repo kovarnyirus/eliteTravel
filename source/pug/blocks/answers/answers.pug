@@ -1,6 +1,6 @@
 mixin answers()
 	// start answers
-	+b.answers&attributes(attributes)
+	+b.answers#answers
 		.container
 			h2 Получите
 				span.accent   ответы
@@ -12,13 +12,13 @@ mixin answers()
 						+e.form-wrapper
 							+e.input-wrapper
 								+e.LABEL.label(for='name') Как Вас зовут
-								+e.INPUT.input(id='name' type='text')
+								+e.INPUT.input(id='name' type='text' required )
 							+e.input-wrapper
 								+e.LABEL.label(for='email') Ваш e-mail
-								+e.INPUT.input(id='email' type='text')
+								+e.INPUT.input(id='email' type='text' required )
 							+e.input-wrapper
 								+e.LABEL.label(for='phone') Введите номер телефона
-								+e.INPUT.input(id='phone' type='tel')
+								+e.INPUT.input.js_phone_mask(id='phone' type='text' required )
 							+e.BUTTON.button.btn 	получить ответы
 							+b.politic
 								.checkbox-wrapper

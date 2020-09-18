@@ -13,11 +13,13 @@ include ../blocks/quiz/quiz
 include ../blocks/reviews/reviews
 include ../blocks/statistic/statistic
 include ../blocks/tour-selection/tour-selection
+include ../blocks/main-nav/main-nav
 
 
 block title
 	title Elite Travel
 block pagecontent
+	+main-nav()
 	+header()
 	+advantages()
 	+tour-selection()

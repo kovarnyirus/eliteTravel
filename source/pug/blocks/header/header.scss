@@ -5,6 +5,7 @@
   display: block;
   margin-bottom: -150px;
   padding-top: 15px;
+
   &__top {
     display: flex;
     //flex-wrap: wrap;
@@ -48,8 +49,10 @@
     letter-spacing: 0.04em;
     color: #D3AE6E;
   }
-  &__nav-toggle{
+
+  &__nav-toggle {
     padding: 0;
+    z-index: 2;
   }
 
   &__callback {
@@ -65,7 +68,8 @@
     width: auto;
     padding-bottom: 4px;
   }
-  &__title{
+
+  &__title {
     margin-top: 48px;
     font-family: Augustus;
     font-style: normal;
@@ -76,7 +80,8 @@
     text-align: center;
     margin-bottom: 11px;
   }
-  &__subtitle{
+
+  &__subtitle {
     font-family: Proxima Nova;
     font-size: 20px;
     line-height: 23px;
@@ -86,8 +91,9 @@
     padding-left: 40px;
     padding-right: 40px;
     position: relative;
+
     &:before,
-    &:after{
+    &:after {
       position: absolute;
       display: block;
       content: '';
@@ -98,47 +104,55 @@
       top: 50%;
       transform: translateY(-50%);
     }
-    &:before{
+
+    &:before {
       left: 30px;
     }
-    &:after{
+
+    &:after {
       right: 30px;
     }
   }
-  @include media-breakpoint-up(lg){
+
+  @include media-breakpoint-up(lg) {
     overflow: visible;
     min-height: 69vw;
     padding-top: 10px;
     background-image: url("../img/header-bg-desctop.png");
-    &__logo{
+    &__logo {
       width: 301px;
       height: 135px;
     }
-    &__nav-toggle{
+    &__nav-toggle {
       position: absolute;
-      top: 220px;
+      top: 280px;
+      .icon{
+        width: 86px;
+        height: 44px;
+      }
     }
-    &__phone-link{
+    &__phone-link {
       margin-top: 10px;
       font-family: Proxima Nova;
       font-size: 28px;
       line-height: 33px;
       letter-spacing: 0.04em;
-      .icon{
+
+      .icon {
         width: 18px;
         height: 19px;
       }
     }
-    &__callback{
+    &__callback {
       font-size: 10px;
       line-height: 10px;
       margin-left: 24px;
       display: block;
     }
-    &__contacts-wrapper{
+    &__contacts-wrapper {
       align-items: flex-start;
     }
-    &__title{
+    &__title {
       margin-top: 124px;
       font-style: normal;
       font-weight: 500;
@@ -146,7 +160,7 @@
       line-height: 52px;
       margin-bottom: 7px;
     }
-    &__subtitle{
+    &__subtitle {
       font-weight: normal;
       font-size: 28px;
       line-height: 34px;
@@ -154,6 +168,22 @@
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: #FFFFFF;
+      width: auto;
+      max-width: 690px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 18px;
+      padding-right: 15px;
+      &:before{
+        left: 0;
+        width: 7px;
+        height: 7px;
+      }
+      &:after{
+        width: 7px;
+        height: 7px;
+        right: 0;
+      }
     }
   }
 }

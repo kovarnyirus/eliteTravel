@@ -1,0 +1,20 @@
+mixin main-nav()
+	// start main-nav
+	+b.main-nav
+		.container
+			+e.wrapper
+				+e.BUTTON.toggle.nav-toggle
+				+e.UL.list
+					+e.LI.item
+						+e.A.link(href='#tour-selection') Подбор тура
+					+e.LI.item
+						+e.A.link(href='#advantageous') Выгодные предложения
+					+e.LI.item
+						+e.A.link(href='#callback') Не нашли что искали?
+					+e.LI.item
+						+e.A.link(href='#certificate') Наши сертификаты
+					+e.LI.item
+						+e.A.link(href='#statistic') Цифры о компании
+					+e.LI.item
+						+e.A.link(href='#answers') Получите ответы на популярные вопросы
+	// end main-nav

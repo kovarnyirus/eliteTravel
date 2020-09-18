@@ -1,6 +1,6 @@
 mixin callback()
 	// start callback
-	+b.callback
+	+b.callback#callback
 		.container
 			h2
 				span.accent Не нашли
@@ -9,8 +9,8 @@ mixin callback()
 					span.accent  профессионалам
 			form
 				+e.form-wrapper
-					+e.INPUT.input.input(type='text' placeholder='Как Вас зовут')
-					+e.INPUT.input.input(type='tel' placeholder='Введите номер телефона')
+					+e.INPUT.input.input(type='text' placeholder='Как Вас зовут' required )
+					+e.INPUT.input.input.js_phone_mask(type='text' placeholder='Введите номер телефона' required )
 					+e.BUTTON.btn.btn Подобрать тур
 						+e.IMG.decor.decor(src='img/boing.png' width='53')
 					+b.politic
