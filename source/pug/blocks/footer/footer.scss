@@ -1,0 +1,38 @@
+.footer{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background: #281D28;
+  font-family: Gotham Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 153.12%;
+  text-align: center;
+  color: #FFFFFF;
+  &__copyright{
+    margin-bottom: 6px;
+  }
+  &__develop{
+    a{
+      color: #B79150;
+      border-bottom: 1px solid #B79150;
+    }
+  }
+  @include media-breakpoint-up(lg){
+    padding-top: 12px;
+    padding-bottom: 12px;
+    &__wrapper{
+      display: flex;
+      justify-content: space-between;
+    }
+    &__copyright{
+      margin-bottom: 0;
+      font-size: 15px;
+      line-height: 23px;
+    }
+    &__develop{
+      font-size: 15px;
+      line-height: 23px;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+mixin advantageous()
+	// start advantageous
+	+b.advantageous
+		.container
+			h2
+				span.accent Выгодные
+				|  предложения
+			+e.slider.slider-wrapper
+				.prev
+					+icon('arrow-left')
+				+e.list
+					+e.item
+						+e.IMG(src='img/5.jpg' alt='img')
+					+e.item
+						+e.IMG(src='img/5.jpg' alt='img')
+					+e.item
+						+e.IMG(src='img/5.jpg' alt='img')
+					+e.item
+						+e.IMG(src='img/5.jpg' alt='img')
+				.next
+					+icon('arrow-right')
+
+	// end advantageous

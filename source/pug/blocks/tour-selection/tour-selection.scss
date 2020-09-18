@@ -1,0 +1,11 @@
+.tour-selection {
+  margin-bottom: 60px;
+
+  h2 {
+    margin-bottom: 17px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 85px;
+  }
+}

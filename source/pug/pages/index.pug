@@ -1,7 +1,33 @@
 extends layout/main
+include ../blocks/header/header
+include ../blocks/about/about
+include ../blocks/advantageous/advantageous
+include ../blocks/advantages/advantages
+include ../blocks/answers/answers
+include ../blocks/callback/callback
+include ../blocks/certificate/certificate
+include ../blocks/contacts/contacts
+include ../blocks/footer/footer
+include ../blocks/mixins/mixins
+include ../blocks/quiz/quiz
+include ../blocks/reviews/reviews
+include ../blocks/statistic/statistic
+include ../blocks/tour-selection/tour-selection
+
+
 block title
-	title Grand Prix
+	title Elite Travel
 block pagecontent
-	.container
-		+b.header
-			+e.wrapper sad
+	+header()
+	+advantages()
+	+tour-selection()
+	+advantageous()
+	+callback()
+	+about()
+	+quiz()
+	+reviews()
+	+certificate()
+	+statistic()
+	+answers()
+	+contacts()
+	+footer()

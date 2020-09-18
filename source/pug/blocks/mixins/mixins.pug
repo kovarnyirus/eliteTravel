@@ -1,0 +1,72 @@
+mixin icon(name,mod)
+	- mod = mod || ''
+		svg(class="icon icon-" + name + ' ' + mod)
+			use(xlink:href="img/icons/sprite.svg#" + name)
+
+mixin svg(svg_url, svg_id)
+	if svg_id
+		svg()&attributes(attributes)
+			use(xlink:href= svg_url + '#' + svg_id)
+	else
+		svg()&attributes(attributes)
+			use(xlink:href= svg_url)
+
+
+mixin input(t , pl, className)
+	+e.input-wrap.input-wrap
+		+e.INPUT.input.input(type= t class= className required )&attributes(attributes)
+		+e.LABEL.label.label
+			+e.SPAN.placeholder.placeholder= pl
+	// +e.input-wrap
+
+
+mixin textarea(pl)
+	+e.textarea-wrap.textarea-wrap
+		+e.TEXTAREA.textarea.textarea&attributes(attributes)
+		+e.LABEL.label.label
+			+e.SPAN.placeholder.placeholder= pl
+
+	// +e.input-wrap
+
+mixin form-wrap()
+	+b.form-wrap&attributes(attributes)
+		form(novalidate)
+			block
+
+mixin ci()
+	+b.LABEL.custom-input
+		+e.INPUT.input(type="checkbox")
+		+e.SPAN.lab
+		|
+mixin in-rad(n)
+	+b.LABEL.custom-input
+		+e.INPUT.input(type="radio" name= n)&attributes(attributes)
+		+e.SPAN.lab
+		block
+mixin in-ch()
+	+b.LABEL.custom-input
+		+e.INPUT.input(type="checkbox" name= n)&attributes(attributes)
+		+e.SPAN.lab
+		block
+mixin add-file(n)
+	+b.add-file
+		label
+			+e.INPUT.input(name='file', type='file')
+			+e.SPAN.btn
+			+e.SPAN.text   Прикрепить резюме
+		+e.SPAN.filename
+
+
+mixin social()
+	+b.social
+		+e.UL.list
+			+e.LI.item--telegram
+				+e.A.item-link(href="#")
+					+icon("telegram")
+					span Стикерпак
+			+e.LI.item
+				+e.A.item-link(href="#")
+					+icon("facebook")
+			+e.LI.item
+				+e.A.item-link(href="#")
+					+icon("instagram")

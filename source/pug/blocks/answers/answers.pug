@@ -1,0 +1,43 @@
+mixin answers()
+	// start answers
+	+b.answers&attributes(attributes)
+		.container
+			h2 Получите
+				span.accent   ответы
+				|   на популярные
+				span.accent   вопросы
+			+e.wrapper
+				+e.left-col
+					form
+						+e.form-wrapper
+							+e.input-wrapper
+								+e.LABEL.label(for='name') Как Вас зовут
+								+e.INPUT.input(id='name' type='text')
+							+e.input-wrapper
+								+e.LABEL.label(for='email') Ваш e-mail
+								+e.INPUT.input(id='email' type='text')
+							+e.input-wrapper
+								+e.LABEL.label(for='phone') Введите номер телефона
+								+e.INPUT.input(id='phone' type='tel')
+							+e.BUTTON.button.btn 	получить ответы
+							+b.politic
+								.checkbox-wrapper
+									+e.INPUT.checkbox.checkbox(type='checkbox' checked)
+									+e.LABEL.label.label
+								+e.P.politic-text Я согласен с условиями обработки персональных данных
+				+e.right-col
+					+e.list
+						+e.item
+							+e.H3.title Страхование
+							+e.P.subtitle Зачем оно нужно и как его оформить
+						+e.item
+							+e.H3.title Дисконтная программа
+							+e.P.subtitle Как платить меньше и что для этого нужно
+						+e.item
+							+e.H3.title Способы оплаты
+							+e.P.subtitle Все о способах оплаты в нашем агентстве
+						+e.item
+							+e.H3.title Корпоративным клиентам
+							+e.P.subtitle Преимущества корпоративного обслуживания в нашей компании
+
+	// end answers

@@ -1,8 +1,23 @@
 @import "bootstrap/mixins";
 @import "bootstrap/media";
 @import "bootstrap/bootstrap";
+@import "slick";
 @import "fonts";
 @import "vars";
 @import "media";
 @import "base";
+@import "../pug/blocks/header/header";
+@import "../pug/blocks/about/about";
+@import "../pug/blocks/advantageous/advantageous";
+@import "../pug/blocks/advantages/advantages";
+@import "../pug/blocks/about/about";
+@import "../pug/blocks/callback/callback";
+@import "../pug/blocks/certificate/certificate";
+@import "../pug/blocks/contacts/contacts";
+@import "../pug/blocks/footer/footer";
+@import "../pug/blocks/quiz/quiz";
+@import "../pug/blocks/reviews/reviews";
+@import "../pug/blocks/statistic/statistic";
+@import "../pug/blocks/tour-selection/tour-selection";
+@import "../pug/blocks/answers/answers";
 

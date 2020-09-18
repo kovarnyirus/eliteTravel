@@ -1,0 +1,33 @@
+.advantageous {
+  margin-bottom: 80px;
+  h2{
+    margin-bottom: 30px;
+  }
+  &__item{
+    margin-left: 70px;
+    margin-right: 70px;
+  }
+
+  &__slider{
+    position: relative;
+  }
+  @include media-breakpoint-up(lg){
+    margin-bottom: 85px;
+    &__list{
+      display: flex;
+      max-width: 805px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .prev{
+      display: none!important;
+    }
+    .next{
+      display: none!important;
+    }
+    &__item{
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+  }
+}

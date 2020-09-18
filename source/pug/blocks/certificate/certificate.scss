@@ -1,0 +1,24 @@
+.certificate {
+  margin-bottom: 90px;
+  h2{
+    margin-bottom: 40px;
+  }
+  &__item{
+    margin-left: 70px;
+    margin-right: 70px;
+  }
+  @include media-breakpoint-up(lg){
+
+    &__list{
+      max-width: 1032px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    &__item{
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  }
+}

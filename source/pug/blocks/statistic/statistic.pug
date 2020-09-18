@@ -1,0 +1,24 @@
+mixin item()
+	+e.item
+
+mixin statistic()
+	// start statistic
+	+b.statistic&attributes(attributes)
+		.container
+			h2
+				span.accent Цифры
+				|  о компании
+			+e.list
+				+e.item
+					+e.H3.title 16 лет
+					+e.P.subtitle Разнообразный и богатый опыт позволяет предлагать нашим клиентам лучший сервис
+				+e.item
+					+e.H3.title 48%
+					+e.P.subtitle Почти половина наших туристов — постоянные клиенты
+				+e.item
+					+e.H3.title 24/7/365
+					+e.P.subtitle У нас нет «нерабочих» часов и выходных
+				+e.item
+					+e.H3.title 91%
+					+e.P.subtitle Именно столько клиентов выражают благодарность по окончании тура
+	// end statistic

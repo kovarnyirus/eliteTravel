@@ -1,0 +1,21 @@
+mixin callback()
+	// start callback
+	+b.callback
+		.container
+			h2
+				span.accent Не нашли
+				|  что искали?
+			+e.P.subtitle Доверьте реализацию Вашей мечты
+					span.accent  профессионалам
+			form
+				+e.form-wrapper
+					+e.INPUT.input.input(type='text' placeholder='Как Вас зовут')
+					+e.INPUT.input.input(type='tel' placeholder='Введите номер телефона')
+					+e.BUTTON.btn.btn Подобрать тур
+						+e.IMG.decor.decor(src='img/boing.png' width='53')
+					+b.politic
+						.checkbox-wrapper
+							+e.INPUT.checkbox.checkbox(type='checkbox' checked name='pol' id='pol')
+							+e.LABEL.label.label(for='pol')
+						+e.P.politic-text Я согласен с условиями обработки персональных данных
+	// end callback

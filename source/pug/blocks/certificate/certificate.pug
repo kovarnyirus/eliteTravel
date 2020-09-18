@@ -1,0 +1,26 @@
+mixin item3(src)
+	+e.item
+		+e.IMG.img(src='img/' + src alt='sertificate')
+
+mixin certificate()
+	// start certificate
+	+b.certificate&attributes(attributes)
+		.container
+			h2
+				span.accent Наши
+				|  сертификаты
+			+e.slider.slider-wrapper
+				.prev
+					+icon('arrow-left')
+				+e.list
+					+item3('sertificate1.jpg')
+					+item3('sertificate2.jpg')
+					+item3('sertificate3.jpg')
+					+item3('sertificate4.jpg')
+					+item3('sertificate1.jpg')
+					+item3('sertificate2.jpg')
+					+item3('sertificate3.jpg')
+					+item3('sertificate4.jpg')
+				.next
+					+icon('arrow-right')
+	// end certificate

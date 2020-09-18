@@ -1,0 +1,21 @@
+include ../mixins/mixins
+mixin header()
+	+b.HEAER.header
+		+e.wrapper
+			.container
+				+e.top
+					+e.BUTTON.nav-toggle
+						+icon('menu-toggle')
+					+e.A.logo-wrapper(href='/')
+						+e.IMG.logo(src='img/logo.svg' alt='logo')
+					+e.contacts-wrapper
+						+e.phone-wrapper
+							+e.A.phone-link(href='tel:+78001234567')
+								+icon('phone')
+								|   8 800 123 45 67
+						+e.A.callback(href='#') Заказать обратный звонок
+				+e.content-wrapper
+					+e.H1.title ВАШ ГИД В МИР ПУТЕШЕСТВИЙ
+					+e.subtitle индивидуальный подход к каждому клиенту
+
+

@@ -1,0 +1,36 @@
+mixin contacts()
+	// start contacts
+	+b.contacts&attributes(attributes)
+		.container
+			h2 Будем рады
+				span.accent  встретить Вас	в нашем офисе
+			+e.wrapper
+				+e.left-col
+					+e.adress
+						+icon('map-point')
+						span Санкт-Петербург, Суворовский пр., 1/8
+					+e.phones
+						+icon('phone2')
+						+e.A.tel(href='tel:+78129271728') +7 812 927 17 28
+						|,
+						+e.A.tel(href='tel:927 17 31')   927 17 31
+						|,
+						+e.A.tel(href='tel:418 37 78')   418 37 78
+				+e.right-col
+					+b.social
+						+e.list
+							+e.item
+								+e.A.link--wp(href="#")
+									+icon('wp')
+							+e.item
+								+e.A.link--vk(href="#")
+									+icon('vk')
+							+e.item
+								+e.A.link--insta(href="#")
+									+icon('insta')
+							+e.item
+								+e.A.link--fb(href="#")
+									+icon('fb')
+				+e.map
+					iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3A9844d638689b97d7dad7419f880b38950912048a92363ca463c785670d96167c&amp;source=constructor" width="100%" height="100%" frameborder="0")
+	// end contacts

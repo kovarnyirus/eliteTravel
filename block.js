@@ -16,11 +16,8 @@ const BLOCKS_DIR = path.join(__dirname, 'source/pug/blocks');
 const fileSources = {
   pug: `mixin {blockName}()
 	// start {blockName}
-	+b.{blockName}.section#{blockName}.lazy-background&attributes(attributes)
+	+b.{blockName}&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 {blockName}
-				
 			.row
 	// end {blockName}`,
   scss: `.{blockName} \{
@@ -65,8 +62,8 @@ function validateBlockName(blockName) {
       resolve(isValid);
     } else {
       const errMsg = (
-        `ERR>>> An incorrect block name '${blockName}'\n` +
-        `ERR>>> A block name must include letters, numbers & the minus symbol.`
+          `ERR>>> An incorrect block name '${blockName}'\n` +
+          `ERR>>> A block name must include letters, numbers & the minus symbol.`
       );
       reject(errMsg);
     }
@@ -105,15 +102,15 @@ function createFiles(blocksPath, blockName) {
     const filePath = path.join(blocksPath, filename);
 
     promises.push(
-      new Promise((resolve, reject) => {
-        fs.writeFile(filePath, fileSource, 'utf8', err => {
-          if (err) {
-            reject(`ERR>>> Failed to create a file '${filePath}'`.red);
-          } else {
-            resolve();
-          }
-        });
-      })
+        new Promise((resolve, reject) => {
+          fs.writeFile(filePath, fileSource, 'utf8', err => {
+            if (err) {
+              reject(`ERR>>> Failed to create a file '${filePath}'`.red);
+            } else {
+              resolve();
+            }
+          });
+        })
     );
   });
 
@@ -143,21 +140,21 @@ function initMakeBlock(blockName) {
   const blockPath = path.join(BLOCKS_DIR, blockName);
 
   return validateBlockName(blockName)
-    .then(() => directoryExist(blockPath, blockName))
-    .then(() => createDir(blockPath))
-    .then(() => createFiles(blockPath, blockName))
-    .then(() => getFiles(blockPath))
-    .then(files => {
-      const line = '-'.repeat(48 + blockName.length);
-      console.log(line);
-      console.log(`The block has just been created in 'sourse/pug/blocks/${blockName}'`);
-      console.log(line);
+      .then(() => directoryExist(blockPath, blockName))
+      .then(() => createDir(blockPath))
+      .then(() => createFiles(blockPath, blockName))
+      .then(() => getFiles(blockPath))
+      .then(files => {
+        const line = '-'.repeat(48 + blockName.length);
+        console.log(line);
+        console.log(`The block has just been created in 'sourse/pug/blocks/${blockName}'`);
+        console.log(line);
 
-      // Displays a list of files created
-      files.forEach(file => console.log(file));
+        // Displays a list of files created
+        files.forEach(file => console.log(file));
 
-      rl.close();
-    });
+        rl.close();
+      });
 }
 
 
@@ -168,9 +165,9 @@ function initMakeBlock(blockName) {
 
 // Command line arguments
 const blockNameFromCli = process.argv
-  .slice(2)
-  // join all arguments to one string (to simplify the capture user input errors)
-  .join(' ');
+    .slice(2)
+    // join all arguments to one string (to simplify the capture user input errors)
+    .join(' ');
 
 
 // If the user pass the name of the block in the command-line options
