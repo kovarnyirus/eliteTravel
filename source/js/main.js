@@ -58,16 +58,43 @@ $(document).ready(function () {
         showMaskOnHover: false
     });
 
+    $('.step-wrap__plus').click(function(e) {
+        e.preventDefault();
+        var field = $(this).next(),
+            num = field.val(),
+            minus = $(this).siblings('.step-wrap__minus');
+
+        num++;
+        $(field).val(num);
+        if (num === 0) {
+            $(minus).prop('disabled', true);
+        } else {
+            $(minus).prop('disabled', false);
+        };
+    });
+
+    $('.step-wrap__minus').click(function(e) {
+        e.preventDefault();
+        var field = $(this).prev(),
+            num = field.val();
+
+        num--;
+        $(field).val(num);
+        if (num === 0) {
+            $(this).prop('disabled', true);
+        }
+    });
+
 
     //quiz
-    $marginLeft = 0;
+    let marginLeft = 0;
     $('.step .btn').click(function() {
-        $marginLeft -= 100;
-        $left = $marginLeft + '%';
+        marginLeft -= 100;
+        let left = marginLeft + '%';
         if ($(this).val() === 'отправить') {
             return;
         } else {
-            $('.steps').css('margin-left', $left);
+            $('.steps').css('margin-left', left);
         };
     });
 
@@ -80,8 +107,8 @@ $(document).ready(function () {
         },
     });
     $('.ui-slider-handle, .step').mousemove(function() {
-        $left = parseInt($('.ui-slider-handle').css('left')) - 35 + 'px';
-        $('#amount').css('left', $left)
+        left = parseInt($('.ui-slider-handle').css('left')) - 35 + 'px';
+        $('#amount').css('left', left)
     });
     $( "#amount" ).val( $( "#slider" ).slider( "value" ) + ' р');
 
