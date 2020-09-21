@@ -1,7 +1,7 @@
 
 .quiz {
   //padding-top: 74px;
-  padding-bottom: 109px;
+  padding-bottom: 80px;
   background: url("../img/bg-quiz.png") no-repeat center;
   background-size: cover;
 }
@@ -53,13 +53,13 @@
 }
 
 .step-wrap__inner {
-  margin-bottom: 65px;
+  margin-bottom: 20px;
   width: 33.3%;
   max-width: 277px;
 }
 
 .step-wrap__img {
-  margin-bottom: 18px;
+  margin-bottom: 10px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -141,7 +141,7 @@
 }
 
 .step-wrap_second {
-  margin-bottom: 95px;
+  //margin-bottom: 95px;
   padding-top: 94px;
   width: 100%;
 }
@@ -156,7 +156,7 @@
 }
 
 .step-wrap_third {
-  margin-bottom: 111px;
+  //margin-bottom: 111px;
   padding-top: 85px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -176,7 +176,7 @@
 }
 
 .step-wrap_fourth {
-  margin-bottom: 100px;
+  //margin-bottom: 100px;
   padding-top: 96px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -197,7 +197,7 @@
 }
 
 .step-wrap_fifth {
-  margin-bottom: 293px;
+  //margin-bottom: 293px;
   padding-top: 186px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -210,7 +210,7 @@
 }
 
 .step-wrap_sixth {
-  margin-bottom: 423px;
+  //margin-bottom: 423px;
   padding-top: 70px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -536,7 +536,6 @@
 }
 
 .quiz {
-  margin-bottom: 90px;
   h2{
     font-family: Gotham Pro;
     font-style: normal;

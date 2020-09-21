@@ -1,7 +1,6 @@
 mixin item1(icon, title, description)
 	+e.item
-		+e.icon
-			+icon(icon)
+		+e.icon(style="background-image: url('img/icons/"  +icon+ ".svg')")
 		+e.content
 			+e.H4.title= title
 			+e.P.description= description

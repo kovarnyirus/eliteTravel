@@ -3,6 +3,16 @@
 
   &__item {
     display: flex;
+    align-items: flex-start;
+  }
+
+  &__icon {
+    min-width: 60px;
+    min-height: 60px;
+    background-size: cover;
+    display: block;
+    background-repeat: no-repeat;
+    margin-right: 10px;
   }
 
   .icon {
@@ -35,16 +45,33 @@
     &__list {
       display: flex;
       justify-content: space-between;
+      align-items: flex-start;
     }
     &__item {
       flex-wrap: wrap;
       justify-content: center;
-      width: 22%;
+      //width: 22%;
+      flex-grow: 1;
+      margin-left: 10px;
+     margin-right: 10px;
+      &:first-child{
+        max-width: 240px;
+        width: 100%;
+        margin-left: 0;
+      }
+      &:last-child{
+        margin-right: 0;
+      }
+
+    }
+    &__icon {
+      width: 120px;
+      height: 120px;
     }
 
     .icon {
       width: 150px;
-      height: 150px;
+      min-height: 150px;
       margin-left: 0;
       margin-top: 0;
     }
@@ -55,7 +82,7 @@
       line-height: 23px;
       text-transform: uppercase;
     }
-    &__description{
+    &__description {
       text-align: center;
       font-style: normal;
       font-weight: normal;
