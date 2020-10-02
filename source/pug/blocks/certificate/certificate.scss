@@ -8,6 +8,9 @@
     margin-right: 70px;
   }
   @include media-breakpoint-up(lg){
+    h2{
+      margin-bottom: 20px;
+    }
 
     &__list{
       max-width: 1032px;

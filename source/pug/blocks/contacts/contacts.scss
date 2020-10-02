@@ -11,6 +11,7 @@
     color: #FFFFFF;
     text-transform: none;
     margin-bottom: 29px;
+    letter-spacing: normal;
   }
 
   &__wrapper {
@@ -50,13 +51,16 @@
   }
 
   @include media-breakpoint-up(lg) {
+    padding-bottom: 82px;
     h2 {
       font-weight: 900;
       font-size: 33px;
       line-height: 100%;
-      max-width: 643px;
       margin-left: auto;
       margin-right: auto;
+      margin-bottom: 15px;
+      letter-spacing: normal;
+      max-width: 480px;
     }
     &__wrapper {
       max-width: 789px;
@@ -82,7 +86,7 @@
     }
 
     &__phones {
-      margin-bottom: 12px;
+      margin-bottom: 15px;
 
       .icon {
         width: 18px;
@@ -112,6 +116,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: -5px;
 
     &--wp {
       background: #58BD55;

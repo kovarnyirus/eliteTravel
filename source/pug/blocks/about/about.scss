@@ -58,6 +58,10 @@
   }
 
   @include media-breakpoint-up(lg) {
+    margin-bottom: 120px;
+    h2{
+
+    }
     &__wrapper {
       align-items: center;
     }

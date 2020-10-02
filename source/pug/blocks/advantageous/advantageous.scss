@@ -12,7 +12,10 @@
     position: relative;
   }
   @include media-breakpoint-up(lg){
-    margin-bottom: 85px;
+    margin-bottom: 90px;
+    h2{
+      margin-bottom: 10px;
+    }
     &__list{
       display: flex;
       max-width: 805px;
